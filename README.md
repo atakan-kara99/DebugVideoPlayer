@@ -26,6 +26,54 @@ A powerful tool for video frame processing, playback control, and debugging. It 
 
 ---
 
+## Overlay Elements
+
+The Debug Video Player includes an **Information Overlay** that displays real-time data:
+
+1. **Playback Speed** (Top Left):  
+   Displays the current playback speed (e.g., `1.5x`).
+
+2. **Processing Time** (Top Right):  
+   Shows the frame processing time in milliseconds (e.g., `23.45 ms`).
+
+3. **Pixel Information** (Bottom Left):  
+   On clicking, displays the pixel coordinates and HSV values (e.g., `X, Y: 120, 80, HSV: 255, 128, 64`).
+
+4. **Frame ID** (Bottom Right):  
+   Indicates the current frame number (e.g., `1234/12345`).
+
+---
+
+## Controls
+
+### Mouse Controls
+
+- **Left Click & Drag**:  
+  Displays pixel coordinates and HSV values under the mouse pointer and zooms into that area.  
+  *(Note: Not available on macOS.)*
+
+### Keyboard Controls
+
+- **`q`**: Quit the player.
+- **`d`**: Increase playback speed.
+- **`s`**: Decrease playback speed.
+- **Space (` `)**: Pause/Resume playback.
+- **`p`**: Rewind playback.
+- **`k`**: Skip a single frame if paused; otherwise, skip 3 seconds backward.
+- **`l`**: Skip a single frame if paused; otherwise, skip 3 seconds forward.
+- **`0`–`9`**: Jump to a specific percentage of the video (e.g., pressing 5 jumps to 50%).
+
+---
+
+## Dependencies
+
+- **OpenCV**
+- **PyAutoGUI**
+- **NumPy**
+- **Decord**
+
+---
+
 ## Usage
 
 ### 1. Initialize the Processor
@@ -121,54 +169,6 @@ processor.process_video_single()
 # Or start multi-threaded video processing.
 processor.process_video_multi()
 ```
-
----
-
-## Overlay Elements
-
-The Debug Video Player includes an **Information Overlay** that displays real-time data:
-
-1. **Playback Speed** (Top Left):  
-   Displays the current playback speed (e.g., `1.5x`).
-
-2. **Processing Time** (Top Right):  
-   Shows the frame processing time in milliseconds (e.g., `23.45 ms`).
-
-3. **Pixel Information** (Bottom Left):  
-   On clicking, displays the pixel coordinates and HSV values (e.g., `X, Y: 120, 80, HSV: 255, 128, 64`).
-
-4. **Frame ID** (Bottom Right):  
-   Indicates the current frame number (e.g., `1234/12345`).
-
----
-
-## Controls
-
-### Mouse Controls
-
-- **Left Click & Drag**:  
-  Displays pixel coordinates and HSV values under the mouse pointer and zooms into that area.  
-  *(Note: Not available on macOS.)*
-
-### Keyboard Controls
-
-- **`q`**: Quit the player.
-- **`d`**: Increase playback speed.
-- **`s`**: Decrease playback speed.
-- **Space (` `)**: Pause/Resume playback.
-- **`p`**: Rewind playback.
-- **`k`**: Skip a single frame if paused; otherwise, skip 3 seconds backward.
-- **`l`**: Skip a single frame if paused; otherwise, skip 3 seconds forward.
-- **`0`–`9`**: Jump to a specific percentage of the video (e.g., pressing 5 jumps to 50%).
-
----
-
-## Dependencies
-
-- **OpenCV**
-- **PyAutoGUI**
-- **NumPy**
-- **Decord**
 
 ---
 
