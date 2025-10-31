@@ -2,9 +2,7 @@
 
 A powerful tool for video frame processing, playback control, and debugging. It offers overlays, custom frame processing, and interactive mouse-based controls, making it ideal for development and testing.
 
-<p align="center">
-  <img src="./demo.png" alt="Demo" width="800">
-</p>
+<img src="./demo.png" alt="Demo">
 
 ---
 
